@@ -8,6 +8,8 @@ class L_training extends Component
 {
     public function render()
     {
-        return view('livewire.training.index');
-    }
+        return view('livewire.training.index',[
+            'title' => 'Training',
+        ]);
+    } 
 }

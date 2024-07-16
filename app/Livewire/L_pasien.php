@@ -8,6 +8,8 @@ class L_pasien extends Component
 {
     public function render()
     {
-        return view('livewire.pasien.index');
+        return view('livewire.pasien.index',[
+            'title' => 'Pasien',
+        ]);
     }
 }
