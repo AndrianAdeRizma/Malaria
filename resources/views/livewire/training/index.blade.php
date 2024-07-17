@@ -70,7 +70,7 @@
                             <th>Berkeringat</th>
                             <th>Mual</th>
                             <th>Diagnosa</th>
-                        </tr>
+                        </tr> 
                     </thead>
                     <tbody>
                         @forelse($trainigs as $index => $training)
