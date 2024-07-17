@@ -2473,7 +2473,7 @@
               </div> --}}
             </li>
             <li class="dropdown nav-item">
-              <a  href="training" wire:navigate aria-haspopup="true" data-toggle="dropdown" class="nav-link" aria-expanded="false">
+              <a  href="Livewire.navigate('/new/url')" wire:navigate aria-haspopup="true" data-toggle="dropdown" class="nav-link" aria-expanded="false">
                 <i class="nav-link-icon pe-7s-settings"></i> Training
                 {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
               </a>
@@ -2969,8 +2969,8 @@
                   <span class="mr-3 opacity-8 flag large IT"></span> Italy
                 </button>
               </div>
-            </div> --}}
-            {{-- <div class="dropdown">
+            </div>  --}}
+             {{-- <div class="dropdown">
               <button type="button" aria-haspopup="true" data-toggle="dropdown" aria-expanded="false"
                 class="p-0 btn btn-link dd-chart-btn">
                 <span class="icon-wrapper icon-wrapper-alt rounded-circle">
