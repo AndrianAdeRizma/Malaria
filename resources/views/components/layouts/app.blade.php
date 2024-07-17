@@ -2432,7 +2432,7 @@
               </div> --}}
             </li>
             <li class="btn-group nav-item">
-              <a href="pasien" wire:navigate class="nav-link" data-toggle="dropdown" aria-expanded="false">
+              <a href="pasien" wire:navigate.hover class="nav-link" data-toggle="dropdown" aria-expanded="false">
                 <i class="nav-link-icon metismenu-icon pe-7s-id"> </i>Pasien
                 {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
               </a>
@@ -2473,7 +2473,7 @@
               </div> --}}
             </li>
             <li class="dropdown nav-item">
-              <a  href="Livewire.navigate('/new/url')" wire:navigate aria-haspopup="true" data-toggle="dropdown" class="nav-link" aria-expanded="false">
+              <a  href="training" wire:navigate aria-haspopup="true" data-toggle="dropdown" class="nav-link" aria-expanded="false">
                 <i class="nav-link-icon pe-7s-settings"></i> Training
                 {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
               </a>
