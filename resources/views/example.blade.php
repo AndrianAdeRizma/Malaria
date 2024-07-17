@@ -8,8 +8,6 @@
 </head>
 <body>
     {{ $slot }}
-
-
 </body>
 </html>
 https://demo.dashboardpack.com/architectui-html-pro/
