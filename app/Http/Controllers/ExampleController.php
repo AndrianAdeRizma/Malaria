@@ -12,4 +12,12 @@ class ExampleController extends Controller
         ];
         return view('example', $data);
     }
+
+    public function pasien()
+    {
+        $data=[
+            'title'=> 'Example',
+        ];
+        return view('pasien.index', $data);
+    }
 }

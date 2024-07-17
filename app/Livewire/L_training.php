@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Training;
 
 class L_training extends Component
 {
@@ -10,6 +11,7 @@ class L_training extends Component
     {
         return view('livewire.training.index',[
             'title' => 'Training',
+            'trainigs' => Training::all(),
         ]);
     } 
 }
