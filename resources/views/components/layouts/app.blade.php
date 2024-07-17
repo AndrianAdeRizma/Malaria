@@ -2347,12 +2347,12 @@
           </div>
           <ul class="header-megamenu nav">
             <li class="nav-item">
-              <a href="javascript:void(0);" data-placement="bottom" rel="popover-focus" data-offset="300"
+              <a href="dashboard" wire:navigate data-placement="bottom" rel="popover-focus" data-offset="300"
                 data-toggle="popover-custom" class="nav-link" data-original-title="" title="">
-                <i class="nav-link-icon pe-7s-gift"> </i> Mega Menu
-                <i class="fa fa-angle-down ml-2 opacity-5"></i>
+                <i class="nav-link-icon metismenu-icon pe-7s-rocket"> </i> Dashboard
+                {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
               </a>
-              <div class="rm-max-width">
+              {{-- <div class="rm-max-width">
                 <div class="d-none popover-custom-content">
                   <div class="dropdown-mega-menu">
                     <div class="grid-menu grid-menu-3col">
@@ -2429,14 +2429,14 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </li>
             <li class="btn-group nav-item">
-              <a class="nav-link" data-toggle="dropdown" aria-expanded="false">
-                <span class="badge badge-pill badge-danger ml-0 mr-2">4</span> Settings
-                <i class="fa fa-angle-down ml-2 opacity-5"></i>
+              <a href="pasien" wire:navigate class="nav-link" data-toggle="dropdown" aria-expanded="false">
+                <i class="nav-link-icon metismenu-icon pe-7s-id"> </i>Pasien
+                {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
               </a>
-              <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu">
+              {{-- <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu">
                 <div class="dropdown-menu-header">
                   <div class="dropdown-menu-header-inner bg-secondary">
                     <div class="menu-header-image opacity-5"
@@ -2470,14 +2470,14 @@
                     <button class="btn-wide btn-shadow btn btn-danger btn-sm">Cancel</button>
                   </li>
                 </ul>
-              </div>
+              </div> --}}
             </li>
             <li class="dropdown nav-item">
-              <a aria-haspopup="true" data-toggle="dropdown" class="nav-link" aria-expanded="false">
-                <i class="nav-link-icon pe-7s-settings"></i> Projects
-                <i class="fa fa-angle-down ml-2 opacity-5"></i>
+              <a  href="training" wire:navigate aria-haspopup="true" data-toggle="dropdown" class="nav-link" aria-expanded="false">
+                <i class="nav-link-icon pe-7s-settings"></i> Training
+                {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
               </a>
-              <div tabindex="-1" role="menu" aria-hidden="true"
+              {{-- <div tabindex="-1" role="menu" aria-hidden="true"
                 class="dropdown-menu-rounded dropdown-menu-lg rm-pointers dropdown-menu">
                 <div class="dropdown-menu-header">
                   <div class="dropdown-menu-header-inner bg-success">
@@ -2511,7 +2511,7 @@
                 <button type="button" tabindex="0" class="dropdown-item">
                   <i class="dropdown-icon lnr-file-empty"></i>Frontend Dev
                 </button>
-              </div>
+              </div> --}}
             </li>
           </ul>
         </div>
