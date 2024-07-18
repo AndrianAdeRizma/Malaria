@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="modal-footer clearfix flex justify-content">
                                     <div class="float-left">
-                                        <a href="javascript:void(0);" class="btn-lg btn btn-link">
+                                        <a href="{{ url('/') }}" class="btn-lg btn btn-link">
                                             << Back</a>
                                     </div>
                                     <div class="float-left">

@@ -12,7 +12,7 @@ class L_landing extends Component
     #[Layout('components.layouts.landing')] 
     public function render()
     {
-        return view('livewire.landing.index',[
+        return view('livewire.public.index',[
             'title' => 'Dashboard | Pages',
         ]);
     }

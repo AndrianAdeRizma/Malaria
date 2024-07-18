@@ -14,7 +14,7 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
 
     <meta name="msapplication-tap-highlight" content="no">
-    <link href="assets/css/main.min.css" rel="stylesheet">
+    <link href="{{ url('assets/css/main.min.css') }}" rel="stylesheet">
 
     <style>
         @-webkit-keyframes swal2-show {
@@ -2302,7 +2302,7 @@
             height: 200%;
         }
     </style>
-   {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 </head>
 
 <body cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1187.0" data-gr-ext-installed="">
@@ -3179,9 +3179,11 @@
     </div>
 
     <div class="app-drawer-overlay d-none animated fadeIn"></div>
-  
-    <script type="text/javascript" src="assets/js/main.min.js"></script>
-      
+
+    <script type="text/javascript" src="{{ url('assets/js/main.min.js') }}"></script>
+
+    @yield('scripts')
+
     {{-- <script>
         document.addEventListener('DOMContentLoaded', () => { 
             <script type="text/javascript" src="assets/js/main.min.js"></script>
