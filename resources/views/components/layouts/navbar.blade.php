@@ -9,7 +9,7 @@
     </div> --}}
     <ul class="header-megamenu nav">
       <li class="nav-item">
-        <a href="dashboard" wire:navigate.hover data-placement="bottom" rel="popover-focus" data-offset="300"
+        <a href="dashboard"  data-placement="bottom" rel="popover-focus" data-offset="300"
           data-toggle="popover-custom" class="nav-link {{ (request()->is('dashboard')) ? 'active' : '' }}">
           <i class="nav-link-icon metismenu-icon pe-7s-rocket"> </i> Dashboard
           {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
@@ -94,7 +94,7 @@
         </div> --}}
       </li>
       <li class="btn-group nav-item">
-        <a href="pasien" wire:navigate.hover class="nav-link {{ (request()->is('pasien')) ? 'active' : '' }}">
+        <a href="pasien"  class="nav-link {{ (request()->is('pasien')) ? 'active' : '' }}">
           <i class="nav-link-icon metismenu-icon pe-7s-id"> </i>Pasien
           {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
         </a>
@@ -135,7 +135,7 @@
         </div> --}}
       </li>
       <li class="dropdown nav-item">
-        <a  href="training" wire:navigate.hover class="nav-link {{ (request()->is('training')) ? 'active' : '' }}">
+        <a  href="training"  class="nav-link {{ (request()->is('training')) ? 'active' : '' }}">
           <i class="nav-link-icon pe-7s-settings"></i> Training
           {{-- <i class="fa fa-angle-down ml-2 opacity-5"></i> --}}
         </a>
@@ -176,7 +176,7 @@
         </div> --}}
       </li>
       <li class="dropdown nav-item" style="color: white">
-        <a  href="testing" wire:navigate.hover class="nav-link {{ (request()->is('testing')) ? 'active' : '' }}">
+        <a  href="testing"  class="nav-link {{ (request()->is('testing')) ? 'active' : '' }}">
           <i class="nav-link-icon pe-7s-check" ></i> Testing
         </a>
        

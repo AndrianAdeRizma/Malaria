@@ -6,7 +6,7 @@
                     <div class="page-title-icon">
                         <i class="pe-7s-id icon-gradient bg-mean-fruit"></i>
                     </div>
-                    <div>{{ $title }}
+                    <div>{{ $section }}
                         <div class="page-title-subheading">Choose between regular React Bootstrap tables or advanced
                             dynamic ones.</div>
                     </div>
@@ -95,3 +95,4 @@
         </div>
     </div>
 </div>
+
