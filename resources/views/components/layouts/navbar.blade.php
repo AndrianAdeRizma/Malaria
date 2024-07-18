@@ -712,7 +712,7 @@
                             <img width="42" class="rounded-circle" src="assets/images/1.jpg" alt="">
                           </div>
                           <div class="widget-content-left">
-                            <div class="widget-heading">{{(auth()->user()->email)}}</div>
+                            <div class="widget-heading">{{ auth()->user()->email }} </div>
                             <div class="widget-subheading opacity-8">A short profile description</div>
                           </div>
                           <div class="widget-content-right mr-2">
@@ -723,7 +723,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="scroll-area-xs" style="height: 150px;">
+                {{-- <div class="scroll-area-xs" style="height: 150px;">
                   <div class="scrollbar-container ps">
                     <ul class="nav flex-column">
                       <li class="nav-item-header nav-item">Activity</li>
@@ -758,7 +758,7 @@
                       <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
                     </div>
                   </div>
-                </div>
+                </div> --}}
                 <ul class="nav flex-column">
                   <li class="nav-item-divider mb-0 nav-item"></li>
                 </ul>
@@ -789,7 +789,7 @@
               </div>
             </div>
           </div>
-          <div class="widget-content-left  ml-3 header-user-info">
+          <div class="widget-content-left text-white ml-3 header-user-info">
             <div class="widget-heading">  {{(auth()->user()->email)}} </div>
             <div class="widget-subheading"> VP People Manager </div>
           </div>

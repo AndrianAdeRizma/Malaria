@@ -20,6 +20,7 @@ class PasienFactory extends Factory
             'nama' => fake()->name(),
             'tgl_lahir' => fake()->dateTime($max = 'now', $timezone = null),
             'gol_darah' => fake()->randomElement(['A','AB','B','O']),
+            'user_id' => fake()->unique()->numberBetween(1, 10),
         ];
     }
 }
