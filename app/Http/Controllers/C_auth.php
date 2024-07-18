@@ -26,7 +26,7 @@ class C_auth extends Controller
             'password' => ['required'],
         ];
 
-        $credentials =  $request->only('email', 'password');
+        $credentials =  $this->validate($request, $rules);
 
         if (Auth::attempt($credentials)) {
 

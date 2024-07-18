@@ -11,7 +11,6 @@ class L_dashboard extends Component
     #[Layout('layouts.app')] 
     public function render()
     {
-        // dd(auth()->user()->email);
         return view('livewire.dashboard.index',[
            
         ]);

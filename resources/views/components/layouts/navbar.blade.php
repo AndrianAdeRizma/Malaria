@@ -712,11 +712,11 @@
                             <img width="42" class="rounded-circle" src="assets/images/1.jpg" alt="">
                           </div>
                           <div class="widget-content-left">
-                            <div class="widget-heading">Alina Mcloughlin</div>
+                            <div class="widget-heading">{{(auth()->user()->email)}}</div>
                             <div class="widget-subheading opacity-8">A short profile description</div>
                           </div>
                           <div class="widget-content-right mr-2">
-                            <button class="btn-pill btn-shadow btn-shine btn btn-focus">Logout</button>
+                            <a href="{{route('logout')}}" class="btn-pill btn-shadow btn-shine btn btn-focus">Logout</a>
                           </div>
                         </div>
                       </div>
@@ -790,7 +790,7 @@
             </div>
           </div>
           <div class="widget-content-left  ml-3 header-user-info">
-            <div class="widget-heading"> Alina Lord Ucil </div>
+            <div class="widget-heading">  {{(auth()->user()->email)}} </div>
             <div class="widget-subheading"> VP People Manager </div>
           </div>
           <div class="widget-content-right header-user-info ml-3">
