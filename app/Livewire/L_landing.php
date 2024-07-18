@@ -4,14 +4,16 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\Attributes\Title;
+use Livewire\Attributes\Layout;
 
 class L_landing extends Component
 {
-    #[Title('Landing | Pages')] 
+    #[Title('Landing | Pages')]
+    #[Layout('components.layouts.landing')] 
     public function render()
     {
         return view('livewire.landing.index',[
             'title' => 'Dashboard | Pages',
-        ])->layout('components.layouts.landing');
+        ]);
     }
 }
