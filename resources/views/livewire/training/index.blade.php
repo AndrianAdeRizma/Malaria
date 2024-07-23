@@ -58,7 +58,14 @@
                 </div>
             </div>
         </div>
-        <div class="main-card mb-3 card">
+        <div class="main-card mb-3 card" x-data="{ isOpen: @entangle('isModalOpen') }">
+            <div class="card-header">
+                <button data-toggle="modal" data-target="#formModal" 
+                    class="btn-shadow mr-3 btn btn-primary">
+                    <i class="fa fa-plus-square"></i>
+                    Tambah
+                </button>
+            </div>
             <div class="card-body">
                 <table style="width: 100%;" id="example" class="table table-hover table-striped table-bordered">
                     <thead class="bg-plum-plate text-white">
@@ -70,17 +77,17 @@
                             <th>Berkeringat</th>
                             <th>Mual</th>
                             <th>Diagnosa</th>
-                        </tr> 
+                        </tr>
                     </thead>
                     <tbody>
                         @forelse($trainigs as $index => $training)
                             <tr>
-                                <td>{{ $index+1 }}</td>
+                                <td>{{ $index + 1 }}</td>
                                 <td>{{ $training->demam }}</td>
                                 <td>{{ $training->sakit_kepala }}</td>
-                                <td>{{ $training->mengigil}}</td>
-                                <td>{{ $training->berkeringat}}</td>
-                                <td>{{ $training->mual}}</td>
+                                <td>{{ $training->mengigil }}</td>
+                                <td>{{ $training->berkeringat }}</td>
+                                <td>{{ $training->mual }}</td>
                                 <td>{{ $training->diagnosa }}</td>
                             </tr>
                         @empty
@@ -95,6 +102,7 @@
                     </tbody>
                 </table>
             </div>
+            @include('livewire.training.form')
         </div>
     </div>
 </div>

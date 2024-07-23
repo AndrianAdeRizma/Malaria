@@ -2,11 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\C_auth;
-use App\Livewire\L_pasien;
-use App\Livewire\L_landing;
-use App\Livewire\L_testing;
-use App\Livewire\L_training;
-use App\Livewire\L_dashboard;
+use App\Livewire\{
+Pasien,Landing,Testing,Training,Dashboard
+};
  
 Route::controller(C_auth::class)->group(function () {
   Route::get('login', 'index')->name('login')->middleware('guest');
@@ -16,13 +14,13 @@ Route::controller(C_auth::class)->group(function () {
   Route::get('logout', 'logout')->name('logout')->middleware('auth');
 });
 
-Route::get('/', L_landing::class)->name('landing');
+Route::get('/', Landing::class)->name('landing');
 
 Route::middleware(['AdminMiddleware'])->group(function () {
-  Route::get('/dashboard', L_dashboard::class);
-  Route::get('/training', L_training::class);
-  Route::get('/testing', L_testing::class);
-  Route::get('/pasien', L_pasien::class);
+  Route::get('/dashboard', Dashboard::class);
+  Route::get('/training', Training::class);
+  Route::get('/testing', Testing::class);
+  Route::get('/pasien', Pasien::class);
 });
 
 

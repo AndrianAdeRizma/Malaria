@@ -15,6 +15,7 @@
 
     <meta name="msapplication-tap-highlight" content="no">
     <link href="{{ url('assets/css/main.min.css') }}" rel="stylesheet">
+    <link href="{{ url('assets/css/loading.css') }}" rel="stylesheet">
 
     <style>
         @-webkit-keyframes swal2-show {
@@ -2306,6 +2307,10 @@
 </head>
 
 <body cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1187.0" data-gr-ext-installed="">
+    <div id="loading-wrapper">
+        <div id="loading-text">LOADING</div>
+        <div id="loading-content"></div>
+      </div>
     <div class="app-container app-theme-white body-tabs-line fixed-header">
         <div class="app-header header-shadow bg-plum-plate header-text-light">
             <div class="app-header__logo" @style('width:12%')>
@@ -3201,12 +3206,11 @@
             d="M-1 152L-1 152C-1 152 27.4375 152 27.4375 152C27.4375 152 45.72916666666667 152 45.72916666666667 152C45.72916666666667 152 64.02083333333334 152 64.02083333333334 152C64.02083333333334 152 82.31250000000001 152 82.31250000000001 152C82.31250000000001 152 100.60416666666669 152 100.60416666666669 152C100.60416666666669 152 118.89583333333336 152 118.89583333333336 152C118.89583333333336 152 137.18750000000003 152 137.18750000000003 152C137.18750000000003 152 155.47916666666669 152 155.47916666666669 152C155.47916666666669 152 173.77083333333334 152 173.77083333333334 152C173.77083333333334 152 192.0625 152 192.0625 152C192.0625 152 210.35416666666666 152 210.35416666666666 152C210.35416666666666 152 228.64583333333331 152 228.64583333333331 152C228.64583333333331 152 246.93749999999997 152 246.93749999999997 152C246.93749999999997 152 265.22916666666663 152 265.22916666666663 152C265.22916666666663 152 283.5208333333333 152 283.5208333333333 152C283.5208333333333 152 301.8125 152 301.8125 152C301.8125 152 320.1041666666667 152 320.1041666666667 152C320.1041666666667 152 338.39583333333337 152 338.39583333333337 152C338.39583333333337 152 356.68750000000006 152 356.68750000000006 152C356.68750000000006 152 374.97916666666674 152 374.97916666666674 152C374.97916666666674 152 393.2708333333334 152 393.2708333333334 152C393.2708333333334 152 411.5625000000001 152 411.5625000000001 152C411.5625000000001 152 429.8541666666668 152 429.8541666666668 152C429.8541666666668 152 429.8541666666668 152 429.8541666666668 152 ">
         </path>
     </svg>
-</body>
-<!-- <grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
-    <style>
+    <!-- <grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
+        <style>
       div.grammarly-desktop-integration {
-        position: absolute;
-        width: 1px;
+          position: absolute;
+          width: 1px;
         height: 1px;
         padding: 0;
         margin: -1px;
@@ -3218,16 +3222,30 @@
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
-      }
-
+    }
+    
       div.grammarly-desktop-integration:before {
         content: attr(data-content);
-      }
-    </style>
-    <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration"
-      data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}">
-    </div>
-  </template> -->
+    }
+</style>
+<div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration"
+data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}">
+</div>
+</template> -->
 <!-- </grammarly-desktop-integration> -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(window).on('load', function(){
+    setTimeout(removeLoader, 250); //wait for page load PLUS two seconds.
+    });
+    function removeLoader(){
+        $( "#loading-wrapper" ).fadeOut(250, function() {
+        // fadeOut complete. Remove the loading div
+        $( "#loading-wrapper" ).remove(); //makes page more lightweight 
+    });  
+    }
+</script>
+
+</body>
 </html>
