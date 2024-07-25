@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Pasien;
 
 class C_auth extends Controller
 {
@@ -35,6 +38,60 @@ class C_auth extends Controller
             return redirect()->intended('dashboard');
         }
         return back()->with('error', 'Login Gagal!');
+    }
+
+    public function redirect()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function callback()
+    {
+        // Google user object dari google
+        $userFromGoogle = Socialite::driver('google')->stateless()->user();
+
+        // Ambil user dari database berdasarkan google user id
+        $userFromDatabase = M_auth::where('google_id', $userFromGoogle->getId())->first();
+
+        // Jika tidak ada user, maka buat user baru
+        if (!$userFromDatabase) {
+
+            DB::beginTransaction();
+
+            try {
+                $newUser = User::create([
+                    'google_id' => $userFromGoogle->getId(),
+                    'email' => $userFromGoogle->getEmail(),
+                    'level' => 'Pasien',
+                    'password' => null,
+                ]);
+
+                Pasien::create([
+                    'auth_id' => $newUser->id_auth,
+                    'nama'    => $userFromGoogle->getName(),
+                    'created_at' => date('Y-m-d')
+                ]);
+
+                DB::commit();
+            } catch (\Throwable $th) {
+                DB::rollBack();
+                dd($th);
+                die;
+                return redirect()->back()->with(['error' => 'Something Went Wrong!']);
+            }
+
+            // Login user yang baru dibuat
+            auth('web')->login($newUser);
+            session()->regenerate();
+
+            return redirect('/');
+        }
+
+        // Jika ada user langsung login saja
+        auth('web')->login($userFromDatabase);
+        session()->regenerate();
+
+        return redirect('/');
     }
 
     // public function form_registration()

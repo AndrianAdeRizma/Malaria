@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-card mb-3 card" x-data="{ isOpen: @entangle('isModalOpen') }">
+        <div class="main-card mb-3 card">
             <div class="card-header">
                 <button data-toggle="modal" data-target="#formModal" 
                     class="btn-shadow mr-3 btn btn-primary">
@@ -77,6 +77,7 @@
                             <th>Berkeringat</th>
                             <th>Mual</th>
                             <th>Diagnosa</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -89,6 +90,10 @@
                                 <td>{{ $training->berkeringat }}</td>
                                 <td>{{ $training->mual }}</td>
                                 <td>{{ $training->diagnosa }}</td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#formModal" wire:click="edit({{ $training->id }})" class="btn btn-primary btn-sm mx-1">Edit</button>
+                                    <button wire:click="delete({{ $training->id }})" class="btn btn-danger btn-sm">Delete</button>
+                                </td>
                             </tr>
                         @empty
                             <tr>
@@ -102,7 +107,8 @@
                     </tbody>
                 </table>
             </div>
-            @include('livewire.training.form')
         </div>
+        @include('livewire.training.form')
     </div>
 </div>
+

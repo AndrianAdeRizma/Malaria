@@ -716,7 +716,7 @@
                             <div class="widget-subheading opacity-8">A short profile description</div>
                           </div>
                           <div class="widget-content-right mr-2">
-                            <a href="{{route('logout')}}" class="btn-pill btn-shadow btn-shine btn btn-focus">Logout</a>
+                            <a href="logout" class="btn-pill btn-shadow btn-shine btn btn-focus">Logout</a>
                           </div>
                         </div>
                       </div>

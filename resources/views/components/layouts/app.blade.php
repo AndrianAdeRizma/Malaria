@@ -2306,24 +2306,26 @@
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 </head>
 
-<body cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1187.0" data-gr-ext-installed="">
+<body>
     <div id="loading-wrapper">
-        <div id="loading-text">LOADING</div>
+        <div id="loading-text">LOADING....</div>
         <div id="loading-content"></div>
-      </div>
+    </div>
     <div class="app-container app-theme-white body-tabs-line fixed-header">
         <div class="app-header header-shadow bg-plum-plate header-text-light">
             <div class="app-header__logo" @style('width:12%')>
-                <div class="logo-src"></div>
-                {{-- <div class="header__pane ml-auto">
-          <div>
-            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
-          </div>
-        </div> --}}
+                <div class="logo-src">
+
+                </div>
+                                {{-- <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                            </button>
+                        </div>
+                        </div> --}}
             </div>
             <div class="app-header__mobile-menu">
                 <div>
@@ -2346,7 +2348,7 @@
             </div>
             @include('components.layouts.navbar')
         </div>
-        <div class="ui-theme-settings">
+        {{-- <div class="ui-theme-settings">
             <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning">
                 <i class="fa fa-cog fa-w-16 fa-spin fa-2x"></i>
             </button>
@@ -2681,7 +2683,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="app-main">
             {{-- <div class="app-sidebar sidebar-shadow">
         <div class="app-header__logo">
@@ -3177,13 +3179,14 @@
         </div>
       </div> --}}
 
-
-            {{ $slot }}
-
-        </div>
+    </div>
+    <div class="container-fluid mt-5">
+        {{ $slot }}
+    </div>
     </div>
 
     <div class="app-drawer-overlay d-none animated fadeIn"></div>
+    
 
     <script type="text/javascript" src="{{ url('assets/js/main.min.js') }}"></script>
 

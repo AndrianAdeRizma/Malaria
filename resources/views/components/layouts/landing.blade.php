@@ -219,7 +219,7 @@
                   </ul> --}}
                   {{-- </li> --}}
                </ul>
-               <a href="{{ url('login') }}" class="btn btn-sm btn-primary fw-bold">Login</a>
+               <a href="login" class="btn btn-sm btn-primary fw-bold">Login</a>
             </div>
             </div>
          </nav>

@@ -17,7 +17,12 @@ class TrainingFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'demam' => fake()->randomElement(['Rendah','Sedang','Tinggi','Sangat Tinggi']),
+            'sakit_kepala' => fake()->randomElement(['Ringan','Sedang','Berat']),
+            'mengigil' => fake()->randomElement(['Iya','Tidak']),
+            'berkeringat' => fake()->randomElement(['iya','Tidak']),
+            'mual' => fake()->randomElement(['Sering','Tidak Sering']),
+            'diagnosa' => fake()->randomElement(['Sering','Tidak Sering']),
         ];
     }
 }
