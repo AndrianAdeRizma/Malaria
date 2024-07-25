@@ -1,6 +1,6 @@
 <div class="app-main__outer">
     <div class="app-main__inner">
-        <div class="app-page-title mb-4 py-3">
+        <div class="app-page-title mb-3 py-3">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
                     <div class="page-title-icon">

@@ -3180,7 +3180,7 @@
       </div> --}}
 
     </div>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-4 pt-1">
         {{ $slot }}
     </div>
     </div>
@@ -3189,8 +3189,6 @@
     
 
     <script type="text/javascript" src="{{ url('assets/js/main.min.js') }}"></script>
-
-    @yield('scripts')
 
     {{-- <script>
         document.addEventListener('DOMContentLoaded', () => { 
@@ -3243,12 +3241,15 @@ data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&
     setTimeout(removeLoader, 250); //wait for page load PLUS two seconds.
     });
     function removeLoader(){
-        $( "#loading-wrapper" ).fadeOut(250, function() {
+        $( "#loading-wrapper" ).fadeOut(500, function() {
         // fadeOut complete. Remove the loading div
         $( "#loading-wrapper" ).remove(); //makes page more lightweight 
     });  
     }
 </script>
+
+@yield('scripts')
+
 
 </body>
 </html>

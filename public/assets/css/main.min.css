@@ -10973,7 +10973,7 @@ button,
     margin-left: 0 !important;
 }
 .app-main {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     z-index: 8;
     position: relative;

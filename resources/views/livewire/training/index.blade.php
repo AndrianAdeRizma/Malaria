@@ -1,6 +1,6 @@
 <div class="app-main__outer">
     <div class="app-main__inner">
-        <div class="app-page-title mb-4 py-3">
+        <div class="app-page-title mb-3 py-3">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
                     <div class="page-title-icon">
@@ -60,14 +60,35 @@
         </div>
         <div class="main-card mb-3 card">
             <div class="card-header">
-                <button data-toggle="modal" data-target="#formModal" 
-                    class="btn-shadow mr-3 btn btn-primary">
+                <button  wire:click="resetInputs" data-toggle="modal" data-target="#formModal" class="btn-shadow mr-3 btn btn-primary">
                     <i class="fa fa-plus-square"></i>
                     Tambah
                 </button>
             </div>
             <div class="card-body">
-                <table style="width: 100%;" id="example" class="table table-hover table-striped table-bordered">
+                <table style="width: 100%;" id="exampl" class="table table-hover table-striped table-bordered">
+                    <div class="row">
+                        <div class="col-6 float-start mr-auto">
+                            <div class="dataTables_length" id="example_length">
+                                <label>Show
+                                    <select name="example_length" aria-controls="example"
+                                        class="custom-select custom-select-sm form-control form-control-sm col-6">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                    entries</label>
+                            </div>
+                        </div>
+                        <div class="col-6 float-right">
+                            <div id="example_filter" class="float-end">
+                                <label>Search:
+                                    <input type="search" class="form-control form-control-sm float-end" placeholder=""
+                                        aria-controls="example"></label>
+                            </div>
+                        </div>
+                    </div>
                     <thead class="bg-plum-plate text-white">
                         <tr>
                             <th>No</th>
@@ -91,8 +112,11 @@
                                 <td>{{ $training->mual }}</td>
                                 <td>{{ $training->diagnosa }}</td>
                                 <td>
-                                    <button data-toggle="modal" data-target="#formModal" wire:click="edit({{ $training->id }})" class="btn btn-primary btn-sm mx-1">Edit</button>
-                                    <button wire:click="delete({{ $training->id }})" class="btn btn-danger btn-sm">Delete</button>
+                                    <button data-toggle="modal" data-target="#formModal"
+                                        wire:click="edit({{ $training->id }})"
+                                        class="btn btn-primary btn-sm mx-1">Edit</button>
+                                    <button wire:click="delete({{ $training->id }})"
+                                        class="btn btn-danger btn-sm">Delete</button>
                                 </td>
                             </tr>
                         @empty
@@ -112,3 +136,13 @@
     </div>
 </div>
 
+@section('scripts')
+    {{-- @script --}}
+        <script>
+            $('.modal').on('hidden.bs.modal', function() {
+                alert('hii');
+                // $wire.dispatch('post-created');
+            });
+        </script>
+    {{-- @endscript --}}
+@endsection

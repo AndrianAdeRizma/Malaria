@@ -22,7 +22,7 @@ class TrainingFactory extends Factory
             'mengigil' => fake()->randomElement(['Iya','Tidak']),
             'berkeringat' => fake()->randomElement(['iya','Tidak']),
             'mual' => fake()->randomElement(['Sering','Tidak Sering']),
-            'diagnosa' => fake()->randomElement(['Sering','Tidak Sering']),
+            'diagnosa' => fake()->randomElement(['Positif','Negatif']),
         ];
     }
 }

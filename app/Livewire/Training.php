@@ -24,7 +24,7 @@ class Training extends Component
     //     $this->resetInputs();
     // }
 
-    private function resetInputs()
+    public function resetInputs()
     {
         $this->resetValidation();
         
