@@ -61,7 +61,7 @@
         
         <div class="main-card mb-3 card">
             <div class="card-body">
-                <table style="width: 100%;" id="example" class="table table-hover table-striped table-bordered">
+                <table style="width: 100%;" id="exampl" class="table table-hover table-striped table-bordered">
                     <thead class="bg-plum-plate text-white">
                         <tr>
                             <th>No</th>
