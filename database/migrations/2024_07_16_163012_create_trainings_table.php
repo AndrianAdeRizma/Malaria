@@ -16,7 +16,7 @@ return new class extends Migration
             $table->enum('demam',['Rendah','Sedang','Tinggi','Sangat Tinggi']);
             $table->enum('sakit_kepala',['Ringan','Sedang','Berat']);
             $table->enum('mengigil',['Iya','Tidak']);
-            $table->enum('berkeringat',['iya','Tidak']);
+            $table->enum('berkeringat',['Iya','Tidak']);
             $table->enum('mual',['Sering','Tidak Sering']);
             $table->enum('diagnosa',['Positif','Negatif']);
             // $table->timestamps();

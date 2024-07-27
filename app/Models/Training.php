@@ -10,7 +10,7 @@ class Training extends Model
     use HasFactory;
     protected $table = 'trainings';
     protected $primaryKey = 'id';
-    protected $fillable = ['demam', 'sakit_kepala', 'mengigil', 'berkeringan', 'mual','diagnosa'];
+    protected $fillable = ['demam', 'sakit_kepala', 'mengigil', 'berkeringat', 'mual','diagnosa'];
     public $timestamps = false;
     // protected $with = ['products'];
 

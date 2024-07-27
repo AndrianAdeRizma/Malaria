@@ -696,7 +696,7 @@
           <div class="widget-content-left">
             <div class="btn-group">
               <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                <img width="42" class="rounded-circle" src="assets/images/1.jpg" alt="">
+                <img width="42" class="rounded-circle" src="{{ url('assets/images/user/profile.png') }}" alt="">
                 <i class="fa fa-angle-down ml-2 opacity-8"></i>
               </a>
               <div tabindex="-1" role="menu" aria-hidden="true"
@@ -709,7 +709,7 @@
                       <div class="widget-content p-0">
                         <div class="widget-content-wrapper">
                           <div class="widget-content-left mr-3">
-                            <img width="42" class="rounded-circle" src="assets/images/1.jpg" alt="">
+                            <img width="42" class="rounded-circle" src="{{ url('assets/images/user/profile.png') }}" alt="">
                           </div>
                           <div class="widget-content-left">
                             <div class="widget-heading">{{ auth()->user()->email }} </div>
@@ -790,8 +790,8 @@
             </div>
           </div>
           <div class="widget-content-left text-white ml-3 header-user-info">
-            <div class="widget-heading">  {{(auth()->user()->email)}} </div>
-            <div class="widget-subheading"> VP People Manager </div>
+            <div class="widget-heading">{{(auth()->user()->email)}} </div>
+            <div class="widget-subheading"> {{ auth()->user()->role }} </div>
           </div>
           <div class="widget-content-right header-user-info ml-3">
             <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">

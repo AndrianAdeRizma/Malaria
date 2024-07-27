@@ -16,6 +16,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <link href="{{ url('assets/css/main.min.css') }}" rel="stylesheet">
     <link href="{{ url('assets/css/loading.css') }}" rel="stylesheet">
+    {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
 
     <style>
         @-webkit-keyframes swal2-show {
@@ -3180,10 +3181,11 @@
       </div> --}}
 
     </div>
-    <div class="container-fluid mt-4 pt-1">
+    <div class="container mt-4 pt-1">
         {{ $slot }}
     </div>
     </div>
+    {{-- https://nicesnippets.com/blog/laravel-livewire-crud-with-bootstrap-modal-example --}}
 
     <div class="app-drawer-overlay d-none animated fadeIn"></div>
     
@@ -3248,8 +3250,15 @@ data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&
     }
 </script>
 
-@yield('scripts')
 
+{{-- <script>
+      window.addEventListener('close-modal', event => {
+        $("#formModal").modal('hide');
+    });
+</script> --}}
+
+
+@stack('scripts')
 
 </body>
 </html>
